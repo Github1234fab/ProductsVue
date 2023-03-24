@@ -71,6 +71,60 @@
         </h4>
       </div>
     </section>
+
+    <section>
+      <div class="bannerE">
+        <div class="containerA_bannerE">
+          <img
+            src="https://images.asos-media.com/products/asos-design-coupe-vent-beige/204422881-1-beige?$n_640w$&wid=513&fit=constrain"
+            alt=""
+          />
+          <h2 class="bannerE_title">ASOS DESIGN FT.KARL KANI</h2>
+          <h4 class="bannerE_description">Le remix 90s</h4>
+          <button class="bannerE">SHOPPER</button>
+        </div>
+
+        <div class="containerB_bannerE">
+          <img
+            src="https://images.asos-media.com/products/asos-design-lunettes-de-soleil-de-course-enveloppantes-avec-verres-effet-miroir-bleu/204230473-1-midblue?$n_640w$&wid=513&fit=constrain"
+            alt=""
+          />
+          <h2 class="bannerE_title">COLLECTION CASUAL</h2>
+          <h4 class="bannerE_description">Pour passer du lit au canapé</h4>
+          <button class="bannerE">SHOPPER</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="bannerF">
+        <h2 class="bannerF_title">ASOS Premium |<span>logo</span> Spotify Premium</h2>
+        <h3 class="bannerF_description">
+          Profite de Spotify Premium GRATUITEMENT pendant 3 mois + Livraison 24H pendant une année
+          entière avec ASOS Premium !
+        </h3>
+      </div>
+    </section>
+
+    <section>
+      <div class="bannerG">
+        <h2>CLEARPAY <span>logo</span></h2>
+        <h3>Je l'aime. Je l'achète. Je le paie en 3 fois avec Clearpay</h3>
+      </div>
+    </section>
+
+    <section>
+      <div class="bannerH">
+        <h2 class="bannerH title">MARQUES À SUIVRE</h2>
+        <div class="bannerH_containerLogos"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="bannerI">
+        <div class="bannerI_logos"></div>
+      </div>
+    </section>
   </div>
 </template>
 
