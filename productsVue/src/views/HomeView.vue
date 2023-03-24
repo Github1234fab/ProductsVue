@@ -125,7 +125,7 @@
     <section>
       <div class="bannerF">
         <h2 class="bannerF_title">
-          ASOS Premium | <span><i class="fa-brands fa-spotify fa-2l"></i></span> Spotify Premium
+          ASOS Premium | <span><i class="fa-brands fa-spotify fa-xl"></i></span> Spotify Premium
         </h2>
         <h3 class="bannerF_description">
           Profite de Spotify Premium GRATUITEMENT pendant 3 mois <br />
