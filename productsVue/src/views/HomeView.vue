@@ -124,10 +124,12 @@
 
     <section>
       <div class="bannerF">
-        <h2 class="bannerF_title">ASOS Premium |<span>logo</span> Spotify Premium</h2>
+        <h2 class="bannerF_title">
+          ASOS Premium | <span><i class="fa-brands fa-spotify fa-2l"></i></span> Spotify Premium
+        </h2>
         <h3 class="bannerF_description">
-          Profite de Spotify Premium GRATUITEMENT pendant 3 mois + Livraison 24H pendant une année
-          entière avec ASOS Premium !
+          Profite de Spotify Premium GRATUITEMENT pendant 3 mois <br />
+          + Livraison 24H pendant une année entière avec ASOS Premium !
         </h3>
       </div>
     </section>
@@ -343,5 +345,25 @@
   color: white;
   background-color: black;
   transition: 0.5s ease-in-out;
+}
+.bannerF {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #52acff;
+  background-image: linear-gradient(180deg, #52acff 25%, #ffe32c 100%);
+}
+.bannerF_title {
+  font-family: Poppins;
+  font-size: 22px;
+}
+.bannerF_description {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
 }
 </style>
