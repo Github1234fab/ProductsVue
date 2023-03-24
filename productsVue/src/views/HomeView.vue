@@ -96,22 +96,28 @@
       <div class="bannerE">
         <div class="containerA_bannerE">
           <img
+            class="bannerE_picture"
             src="https://images.asos-media.com/products/asos-design-coupe-vent-beige/204422881-1-beige?$n_640w$&wid=513&fit=constrain"
             alt=""
           />
-          <h2 class="bannerE_title">ASOS DESIGN FT.KARL KANI</h2>
-          <h4 class="bannerE_description">Le remix 90s</h4>
-          <button class="bannerE">SHOPPER</button>
+          <div class="bannerE_containerTxt">
+            <h2 class="bannerE_title">ASOS DESIGN FT.KARL KANI</h2>
+            <h4 class="bannerE_description">Le remix 90s</h4>
+            <button class="bannerE_button">SHOPPER</button>
+          </div>
         </div>
 
         <div class="containerB_bannerE">
           <img
+            class="bannerE_picture"
             src="https://images.asos-media.com/products/asos-design-lunettes-de-soleil-de-course-enveloppantes-avec-verres-effet-miroir-bleu/204230473-1-midblue?$n_640w$&wid=513&fit=constrain"
             alt=""
           />
-          <h2 class="bannerE_title">COLLECTION CASUAL</h2>
-          <h4 class="bannerE_description">Pour passer du lit au canapé</h4>
-          <button class="bannerE">SHOPPER</button>
+          <div class="bannerE_containerTxt">
+            <h2 class="bannerE_title">COLLECTION CASUAL</h2>
+            <h4 class="bannerE_description">Pour passer du lit au canapé</h4>
+            <button class="bannerE_button">SHOPPER</button>
+          </div>
         </div>
       </div>
     </section>
@@ -292,5 +298,50 @@
   color: white;
   font-family: poppins;
   font-weight: 200;
+}
+.bannerE {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 860px;
+  gap: 50px;
+}
+.bannerE_picture {
+  width: 460px;
+  height: 600px;
+  object-fit: cover;
+  border-top: solid 10px blue;
+  border-right: solid 10px yellow;
+  border-bottom: solid 10px green;
+  border-left: solid 10px red;
+}
+.bannerE_containerTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+}
+.bannerE_title {
+  font-size: 28px;
+  font-weight: 300;
+  font-family: impact;
+  margin-top: 50px;
+  letter-spacing: 5px;
+}
+.bannerE_description {
+  font-size: 18px;
+  font-family: Oswald;
+}
+.bannerE_button {
+  padding: 15px;
+  background-color: transparent;
+  font-size: 18px;
+  font-family: Oswald;
+}
+.bannerE_button:hover {
+  color: white;
+  background-color: black;
+  transition: 0.5s ease-in-out;
 }
 </style>
