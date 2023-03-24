@@ -38,51 +38,54 @@
             alt=""
           />
           <div class="bannerC_container_title">
-          <h3 class="bannerC_title">Collusion</h3>
-          <h4 class="bannerC_description">Sélection nouvelle saison</h4>
+            <h3 class="bannerC_title">Collusion</h3>
+            <h4 class="bannerC_description">Sélection nouvelle saison</h4>
           </div>
         </div>
 
-        <div class=" bannerC_container">
+        <div class="bannerC_container">
           <img
             class="bannerC_picture"
             src="https://content.asos-media.com/-/media/homepages/mw/2023/march/13-prime/moments/mw_global_new_balance_moment_870x1110.jpg"
             alt=""
           />
           <div class="bannerC_container_title">
-          <h3 class="bannerC_title">New Balance</h3>
-          <h4 class="bannerC_description">L'actu Baskets</h4>
+            <h3 class="bannerC_title">New Balance</h3>
+            <h4 class="bannerC_description">L'actu Baskets</h4>
           </div>
         </div>
 
-        <div class=" bannerC_container">
+        <div class="bannerC_container">
           <img
             class="bannerC_picture"
             src="https://content.asos-media.com/-/media/homepages/mw/2023/march/13-prime/moments/mw_global_new_in_asos_design_moment_870x1110.jpg"
             alt=""
           />
-            <div class="bannerC_container_title">
-          <h3 class="bannerC_title">Nouveautés ASOS Design</h3>
-          <h4 class="bannerC_description">street style en force</h4>
+          <div class="bannerC_container_title">
+            <h3 class="bannerC_title">Nouveautés ASOS Design</h3>
+            <h4 class="bannerC_description">street style en force</h4>
           </div>
         </div>
 
-        <div class=" bannerC_container">
+        <div class="bannerC_container">
           <img
             class="bannerC_picture"
             src="https://content.asos-media.com/-/media/homepages/mw/2023/march/13-prime/moments/mw_global_licence_moment_870x1110.jpg"
             alt=""
           />
           <div class="bannerC_container_title">
-          <h3 class="bannerC_title">T-shirts Rétro</h3>
-          <h4 class="bannerC_description">Throw Baks de motifs!</h4>
+            <h3 class="bannerC_title">T-shirts Rétro</h3>
+            <h4 class="bannerC_description">Throw Baks de motifs!</h4>
           </div>
         </div>
       </div>
     </section>
     <section>
       <div class="bannerD">
-        <h2 class="bannerD_title">JUSQU'À MOINS 50% SUR LES STARS DU STYLE!</h2>
+        <h2 class="bannerD_title">
+          JUSQU'À MOINS 50% SUR <br />
+          LES STARS DU STYLE!
+        </h2>
         <h4 class="bannerD_description">
           Pour une durée limitée sur une sélection d'articles. Prix déjà démarqués sur le site.
         </h4>
@@ -210,8 +213,9 @@
 }
 .bannerB_title {
   position: absolute;
-  top: 250px; right: 250px;
- color: white;
+  top: 250px;
+  right: 250px;
+  color: white;
   z-index: 9999;
   font-size: 178px;
   height: 300px;
@@ -229,42 +233,64 @@
 }
 
 /* //BANNERC */
-.bannerC{
+.bannerC {
   display: flex;
-/* align-items: center; */
-align-content: center;
-gap: 20px;
-justify-content: center;
-margin-top: 20px;
-height: 540px;  
- margin: 0px 50px 20px 50px;
-}
-.bannerC_container{
+  /* align-items: center; */
+  align-content: center;
+  gap: 20px;
+  justify-content: center;
   margin-top: 20px;
-display: flex;
-flex-direction: column;
-height: 300px;
-width: 272px;
-
+  height: 540px;
+  margin: 0px 50px 20px 50px;
 }
-.bannerC_picture{
+.bannerC_container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 272px;
+}
+.bannerC_picture {
   object-fit: cover;
 }
-.bannerC_container_title{
+.bannerC_container_title {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-padding: 15px;
+  padding: 15px;
 }
-.bannerC_title{
+.bannerC_title {
   font-size: 22px;
   font-weight: 700;
   font-family: Oswald;
 }
-.bannerC_description{
+.bannerC_description {
   font-size: 18px;
   font-family: Oswald;
 }
 
+/* //BANNERD */
+.bannerD {
+  background-color: #9447ff;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bannerD_title {
+  font-size: 52px;
+  color: white;
+  font-family: impact;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+.bannerD_description {
+  font-size: 14px;
+  color: white;
+  font-family: poppins;
+  font-weight: 200;
+}
 </style>
