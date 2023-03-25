@@ -136,15 +136,25 @@
 
     <section>
       <div class="bannerG">
-        <h2>CLEARPAY <span>logo</span></h2>
-        <h3>Je l'aime. Je l'achète. Je le paie en 3 fois avec Clearpay</h3>
+        <h2 class="bannerG_title">CLEARPAY <span><i class="fa-solid fa-credit-card"></i></span></h2>
+        <h3 class="bannerG_description">
+          Je l'aime. Je l'achète. Je le paie en 3 fois avec Clearpay
+        </h3>
       </div>
     </section>
 
     <section>
       <div class="bannerH">
-        <h2 class="bannerH title">MARQUES À SUIVRE</h2>
-        <div class="bannerH_containerLogos"></div>
+        <h2 class="bannerH_title">MARQUES À SUIVRE</h2>
+        <div class="bannerH_containerLogos">
+        <img class="bannerH_logos" src="../assets/pictures/North_face_logo_PNG3.png" alt="">
+         <img class="bannerH_logos" src="https://1000logos.net/wp-content/uploads/2021/04/Asos-logo.png" alt="">
+          <img class="bannerH_logos" src="https://cdn.worldvectorlogo.com/logos/topman.svg" alt="">
+          <img class="bannerH_logos" src="https://logo-marque.com/wp-content/uploads/2020/09/New-Balance-Logo-1972-2006.png" alt="">
+          <img class="bannerH_logos" src="../assets/pictures/5a32b844cb9a85480a628fb3.png" alt="">
+          <img class="bannerH_logos" src="https://logos-marques.com/wp-content/uploads/2020/02/Ralph-Lauren-logo.png" alt="">
+          </div>
+        
       </div>
     </section>
 
@@ -160,7 +170,7 @@
 
 <style>
 .main {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
 }
@@ -171,29 +181,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 390px;
-  justify-content: space-around;
+  height: 350px;
+  justify-content: center;
   margin-top: 20px;
 }
 .bannerA_title {
-  font-family: Oswald;
-  font-weight: 600;
+  font-family: Futura;
+  font-weight: 900;
   font-size: 48px;
   letter-spacing: 5px;
 }
 .bannerA_title2 {
-  font-family: impact;
+  font-family: Futura;
   font-weight: 1000;
   font-size: 48px;
   letter-spacing: 3px;
 }
 .bannerA_description {
-  font-family: Oswald;
+  font-family: futura;
   font-weight: 700;
   font-size: 28px;
+  margin-bottom: 20px;
 }
 .bannerA_description2 {
-  font-family: Oswald;
+  font-family: futura;
   font-size: 26px;
 }
 .bannerA_button {
@@ -203,7 +214,7 @@
 /* //BANNERB */
 .bannerB {
   height: 654px;
-  background-color: rgb(137, 44, 44);
+  /* background-color: rgb(137, 44, 44); */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -222,7 +233,7 @@
 .bannerB_title {
   position: absolute;
   top: 250px;
-  right: 250px;
+  right: 180px;
   color: white;
   z-index: 9999;
   font-size: 178px;
@@ -233,7 +244,7 @@
 .bannerB_description {
   position: absolute;
   top: 450px;
-  right: 300px;
+  right: 280px;
   z-index: 9999;
   font-size: 78px;
   height: 100px;
@@ -271,11 +282,11 @@
 .bannerC_title {
   font-size: 22px;
   font-weight: 700;
-  font-family: Oswald;
+  font-family: futura;
 }
 .bannerC_description {
   font-size: 18px;
-  font-family: Oswald;
+  font-family: futura;
 }
 
 /* //BANNERD */
@@ -333,13 +344,13 @@
 }
 .bannerE_description {
   font-size: 18px;
-  font-family: Oswald;
+  font-family: futura;
 }
 .bannerE_button {
   padding: 15px;
   background-color: transparent;
   font-size: 18px;
-  font-family: Oswald;
+  font-family: futura;
 }
 .bannerE_button:hover {
   color: white;
@@ -354,16 +365,59 @@
   height: 200px;
   background-color: #52acff;
   background-image: linear-gradient(180deg, #52acff 25%, #ffe32c 100%);
+  margin-top: 20px;
 }
 .bannerF_title {
   font-family: Poppins;
   font-size: 22px;
 }
 .bannerF_description {
-  font-family: Poppins;
+  font-family: futura;
   font-size: 24px;
   font-weight: 600;
   text-align: center;
   margin-top: 20px;
+}
+
+/* //BANNERG */
+.bannerG {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9cf0e0;
+  height: 100px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.bannerG_title {
+  font-weight:200;
+  font-size: 24px;
+}
+.bannerG_description {
+  font-weight: 200;
+   font-size: 22px;
+}
+
+/* //BANNERH */
+.bannerH{
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.bannerH_title{
+  font-family: futura;
+  font-size: 22px;
+  font-weight: 800;
+}
+.bannerH_logos{
+  height: 80px;
+}
+.bannerH_containerLogos{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 </style>

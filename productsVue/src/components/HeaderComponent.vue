@@ -1,10 +1,9 @@
 <template>
   <div class="container_A">
-    <div class="containerA_Containerbutton">
-      <button class="containerA_button">Market place</button>
-      <button class="containerA_button">Aide et faq</button>
-      <!-- <button class="containerA_button"></button> -->
-    </div>
+    <button class="containerA_button">Market place</button>
+    <button class="containerA_button">Aide et faq</button>
+
+    <!-- </div> -->
   </div>
   <header>
     <!-- <div class="logo"><i class="fa-solid fa-store fa-2xl"></i></div> -->
@@ -61,7 +60,7 @@ nav {
   height: 50px;
 }
 a {
-  font-family: Oswald;
+  font-family: futura;
   text-decoration: none;
   color: white;
   margin: auto;
@@ -72,14 +71,15 @@ a {
   color: grey;
 } */
 .title_appli {
-  margin-left: 20px;
+  margin-left: 15px;
   text-transform: lowercase;
   font-family: Poppins;
   font-size: 28px;
   font-weight: 500;
   color: rgb(255, 255, 255);
-  margin-top: 15px;
+  margin-top: 10px;
   letter-spacing: -2px;
+  text-align: center;
 }
 .search_input {
   width: 750px;
@@ -91,13 +91,17 @@ a {
   border-radius: 20px;
   font-size: 14px;
 }
+::placeholder {
+  padding: 20px;
+  font-family: futura;
+}
 
 .icons {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-around;
-  width: 100px;
+  width: 150px;
   height: 50px;
   margin-right: 50px;
   color: white;
@@ -108,19 +112,18 @@ a {
   height: 60px;
   border: none;
   background-color: #4d4747;
-  width: 100px;
-  font-family: oswald;
+  width: 80px;
+  font-family: futura;
   color: white;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.containerA_containerButton {
+.container_A {
+  width: 100%;
   display: flex;
-  width: 500px;
-  margin-left: 20px;
-  background-color: red;
+  justify-content: flex-end;
 }
 .containerA_button {
   width: 100px;
