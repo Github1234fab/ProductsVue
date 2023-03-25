@@ -2,7 +2,8 @@
   <div class="wrapper">
     <div class="content">
       <div class="product-list">
-        <CardComponent v-for="(product, index) in products"
+        <CardComponent
+          v-for="(product, index) in filteredProducts"
           :key="index"
           :product="product"
         />
@@ -15,14 +16,24 @@
 // import { stringifyExpression } from '@vue/compiler-core'
 import axios from 'axios'
 import CardComponent from '../components/CardComponent.vue'
+import store from '../store.js'
 export default {
   name: 'ProductView',
+  store,
   components: {
-    CardComponent,
+    CardComponent
   },
   data() {
     return {
       products: [],
+      searchItems: ''
+    }
+  },
+  computed: {
+    filteredProducts() {
+      return this.products.filter((product) => {
+        return product.brandName.toLowerCase().includes(this.searchItems.toLowerCase())
+      })
     }
   },
   mounted() {
@@ -38,12 +49,12 @@ export default {
         sort: 'freshness',
         currency: 'USD',
         sizeSchema: 'US',
-        lang: 'en-US',
+        lang: 'en-US'
       },
       headers: {
         'X-RapidAPI-Key': '091a7623a2mshfe940e4a900ef7bp1a0aa8jsn21d9e18b7442',
-        'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
-      },
+        'X-RapidAPI-Host': 'asos2.p.rapidapi.com'
+      }
     }
 
     axios
@@ -55,7 +66,7 @@ export default {
       .catch((error) => {
         console.log(error)
       })
-  },
+  }
 }
 </script>
 

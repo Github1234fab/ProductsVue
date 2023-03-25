@@ -12,16 +12,7 @@
       <button class="button_femme">Femme</button>
       <button class="button_homme">Homme</button>
     </div>
-    <div class="input_container">
-      <input
-        v-model="searchKey"
-        type="search"
-        name="search-product"
-        placeHolder="Recherchez des articles et des marques"
-        class="search_input"
-        autocomplete="off"
-      />
-    </div>
+   <Input-Component/>
     <div class="icons">
       <i class="fa-regular fa-user fa-lg"></i>
       <i class="fa-solid fa-heart fa-lg"></i>
@@ -39,7 +30,15 @@
   </nav>
 </template>
 
-<script></script>
+<script>
+import InputComponent from "../components/InputComponent.vue"
+export default {
+  components: {
+    InputComponent,
+  },
+}
+
+</script>
 
 <style>
 header {
@@ -71,7 +70,7 @@ a {
   color: grey;
 } */
 .title_appli {
-  margin-left: 15px;
+  margin-left: 25px;
   text-transform: lowercase;
   font-family: Poppins;
   font-size: 28px;
@@ -82,7 +81,7 @@ a {
   text-align: center;
 }
 .search_input {
-  width: 750px;
+  width: 650px;
   border: none;
   box-shadow: 1px 1px 3px 1px inset lightGrey;
   padding: 5px;
