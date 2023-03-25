@@ -232,7 +232,7 @@
 }
 .bannerB_title {
   position: absolute;
-  top: 250px;
+  top: 280px;
   right: 180px;
   color: white;
   z-index: 9999;
@@ -243,7 +243,7 @@
 }
 .bannerB_description {
   position: absolute;
-  top: 450px;
+  top: 480px;
   right: 280px;
   z-index: 9999;
   font-size: 78px;
@@ -401,7 +401,7 @@
 /* //BANNERH */
 .bannerH{
   display: flex;
-  height: 200px;
+  height: 300px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -410,6 +410,7 @@
   font-family: futura;
   font-size: 22px;
   font-weight: 800;
+  margin-top: 30px;
 }
 .bannerH_logos{
   height: 80px;
@@ -419,5 +420,7 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  margin-bottom: 30px;
+margin-top: -30px;
 }
 </style>

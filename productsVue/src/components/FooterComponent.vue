@@ -66,10 +66,10 @@ footer {
   height: 250px;
 }
 
-.containerA, a, 
-.containerB, a,
-.containerC, a,
-.containerD, a, {
+.containerA a, 
+.containerB a,
+.containerC a,
+.containerD a {
   color: grey;
   font-size: 11px;
   margin-left: 0px;
