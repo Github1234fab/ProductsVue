@@ -12,7 +12,7 @@
       <button class="button_femme">Femme</button>
       <button class="button_homme">Homme</button>
     </div>
-   <Input-Component/>
+    <InputComponent :products="products" @filteredProducts="handleFilteredProducts" />
     <div class="icons">
       <i class="fa-regular fa-user fa-lg"></i>
       <i class="fa-solid fa-heart fa-lg"></i>
@@ -31,13 +31,63 @@
 </template>
 
 <script>
-import InputComponent from "../components/InputComponent.vue"
+import axios from "axios";
+import InputComponent from "../components/InputComponent.vue";
+
 export default {
   components: {
     InputComponent,
   },
-}
+  data() {
+    return {
+      products: [],
+      searchItems: "",
+      filteredProducts: [], // nouvelle propriété ajoutée
+    };
+  },
+   methods: {
+    handleFilteredProducts(searchTerm) {
+       this.searchItems = searchTerm;
+       console.log(this.searchItems);
+      this.filteredProducts = this.products.filter((product) => {
+        return product.brandName.toLowerCase().includes(this.searchItems.toLowerCase());
+      });
+        console.log(this.filteredProducts);
+     },
 
+  },
+  mounted() {
+    const options = {
+      method: "GET",
+      url: "https://asos2.p.rapidapi.com/products/v2/list",
+      params: {
+        store: "US",
+        offset: "0",
+        categoryId: "4209",
+        limit: "48",
+        country: "US",
+        sort: "freshness",
+        currency: "USD",
+        sizeSchema: "US",
+        lang: "en-US",
+      },
+      headers: {
+        "X-RapidAPI-Key": "091a7623a2mshfe940e4a900ef7bp1a0aa8jsn21d9e18b7442",
+        "X-RapidAPI-Host": "asos2.p.rapidapi.com",
+      },
+    };
+
+    axios
+      .request(options)
+      .then((response) => {
+        this.products = response.data.products;
+        console.log(this.products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 </script>
 
 <style>

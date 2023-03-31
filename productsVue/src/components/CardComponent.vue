@@ -1,11 +1,7 @@
 <template>
   <div class="container_card">
     <div class="card">
-      <img
-        class="image"
-        :src="'https://' + product.imageUrl"
-        alt="image de produits"
-      />
+      <img class="image" :src="'https://' + product.imageUrl" alt="image de produits" />
       <h1 class="title">{{ product.brandName }}</h1>
       <h2 class="colour">{{ product.colour }}</h2>
       <h2 class="price">{{ product.price.current.text }} €</h2>
@@ -17,8 +13,7 @@
             <button
               class="accordion-button text-body bg-light shadow"
               type="button"
-              :aria-controls="'collapseOne-' + product.id"
-            >
+              :aria-controls="'collapseOne-' + product.id">
               Description
             </button>
           </h2>
@@ -28,9 +23,7 @@
             :aria-labelledby="'headingOne-' + product.id"
             :data-parent="'#accordionExample-' + product.id"
           >
-            <div class="accordion-body">
-              {{ product.name }}
-            </div>
+            <div class="accordion-body">{{ product.name }}</div>
           </div>
         </div>
       </div>
@@ -45,22 +38,29 @@ export default {
   props: {
     product: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   mounted() {
-    const button = this.$el.querySelector(
-      `#headingOne-${this.product.id} button`
-    )
+    const button = this.$el.querySelector(`#headingOne-${this.product.id} button`)
     const collapse = this.$el.querySelector(`#collapseOne-${this.product.id}`)
     button.addEventListener('click', () => {
       collapse.classList.toggle('show')
     })
-  },
+  }
 }
 </script>
 
 <style>
+.container-card{
+  height: 900px;
+  width: 100%;
+
+}
+.card{
+   height: 900px;
+  width: 100%;
+}
 .accordion {
   width: 100%;
   height: 100%;

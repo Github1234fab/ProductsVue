@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductView from '../views/ProductView.vue'
+import CardComponent from "../components/CardComponent.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,19 @@ const router = createRouter({
       path: '/products',
       name: 'products',
       component: ProductView
+    },
+    {
+      path: '/Card',
+      name: 'card',
+      component: CardComponent
+    },
+    {
+      path: '/productView',
+      name: 'productView',
+      component: ProductView,
+      props: (route) => ({
+        filteredProducts: route.query.filteredProducts ? JSON.parse(route.query.filteredProducts) : []
+      })
     }
   ]
 })

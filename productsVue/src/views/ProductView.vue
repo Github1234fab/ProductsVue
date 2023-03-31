@@ -13,20 +13,17 @@
 </template>
 
 <script>
-// import { stringifyExpression } from '@vue/compiler-core'
 import axios from 'axios'
 import CardComponent from '../components/CardComponent.vue'
-import store from '../store.js'
 export default {
   name: 'ProductView',
-  store,
   components: {
     CardComponent
   },
   data() {
     return {
       products: [],
-      searchItems: ''
+      searchItems: this.$route.query.brand || ''
     }
   },
   computed: {
@@ -38,23 +35,7 @@ export default {
   },
   mounted() {
     const options = {
-      method: 'GET',
-      url: 'https://asos2.p.rapidapi.com/products/v2/list',
-      params: {
-        store: 'US',
-        offset: '0',
-        categoryId: '4209',
-        limit: '48',
-        country: 'US',
-        sort: 'freshness',
-        currency: 'USD',
-        sizeSchema: 'US',
-        lang: 'en-US'
-      },
-      headers: {
-        'X-RapidAPI-Key': '091a7623a2mshfe940e4a900ef7bp1a0aa8jsn21d9e18b7442',
-        'X-RapidAPI-Host': 'asos2.p.rapidapi.com'
-      }
+      // votre code axios
     }
 
     axios
@@ -69,6 +50,7 @@ export default {
   }
 }
 </script>
+
 
 <style>
 .product-list {

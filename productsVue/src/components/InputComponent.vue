@@ -2,11 +2,12 @@
   <div>
     <div class="input_container">
       <input
-        v-model="searchTerm"
-        @input="updateSearchTerm"
-        type="search"
+        v-model="searchItems"
+        @input="filteredProducts"
+        @keydown.enter="searchProducts"
+        type="text"
         name="search-product"
-        placeHolder="Recherchez des marques"
+        placeHolder="Recherchez par marques"
         class="search_input"
         autocomplete="off"
       />
@@ -16,23 +17,23 @@
 
 <script>
 export default {
+  props: {
+    products: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      searchTerm: ''
-    }
+      searchItems: "",
+    };
   },
   methods: {
-    updateSearchTerm() {
-      this.$store.commit('setSearchTerm', this.searchTerm)
-    }
+    filteredProducts() {
+      this.$emit("filteredProducts", this.searchItems);
+    },
   },
-  computed: {
-    searchItems() {
-      return this.$store.state.searchItems
-    }
-  }
-}
+};
 </script>
 
-<style>
-</style>
+<style></style>
